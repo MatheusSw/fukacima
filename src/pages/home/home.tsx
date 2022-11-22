@@ -2,6 +2,9 @@ import Transactions, {
   TransactionInfo,
   TransactionType,
 } from "../../components/transactions/transactions";
+import { ReactComponent as WalletIcon } from "../../icons/wallet.svg";
+import { ReactComponent as RightArrow } from "../../icons/right-arrow.svg";
+import Card from "../../components/card/card";
 
 const Home: React.FC<{}> = () => {
   const transactions: TransactionInfo[] = [
@@ -33,7 +36,10 @@ const Home: React.FC<{}> = () => {
 
   return (
     <div className="m-10">
-      <h1 className="font-semibold text-2xl mb-12 text-gray-800">Fukacima</h1>
+      <header className="flex flex-col items-center gap-2">
+        <WalletIcon className="w-8" />
+        <h1 className="font-semibold text-2xl mb-12">Fukacima</h1>
+      </header>
       <div className="flex flex-col gap-10">
         <div className="flex gap-1 flex-col items-center">
           <div className="flex justify-start gap-1">
@@ -44,6 +50,19 @@ const Home: React.FC<{}> = () => {
           <span className="text-xs font-medium text-gray-400">
             Your balance
           </span>
+        </div>
+        <div className="flex flex-col gap-1">
+          <div className="flex justify-between">
+            <span className="text-sm font-semibold">Expenses</span>
+            <span className="font-semibold text-sm">$5,300</span>
+          </div>
+          <div className="bg-gray-200 w-full relative rounded-2xl h-2">
+            <div className="bg-green-400 absolute w-1/4 inset-0 rounded-2xl"></div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 p-2 gap-6">
+          <Card title="Income" text="$2,371" />
+          <Card title="Expenses" text="$1,243" />
         </div>
         <div>
           <Transactions transactions={transactions} />
