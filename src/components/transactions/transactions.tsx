@@ -30,7 +30,7 @@ const Transactions: React.FC<TransactionsProps> = ({ transactions }) => {
         {transactions.map((transaction) => {
           return (
             <>
-              <div className="flex justify-between items-center transition-colors duration-300 hover:bg-gray-50 hover:rounded-lg py-4 px-2">
+              <div className="flex justify-between items-center transition-colors duration-300 hover:bg-gray-50 hover:rounded-lg py-4 px-2 hover:cursor-pointer">
                 <div className="flex flex-col gap-1">
                   <span className="font-medium">{transaction.name}</span>
                   <span className="text-xs text-gray-400">

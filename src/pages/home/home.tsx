@@ -3,7 +3,6 @@ import Transactions, {
   TransactionType,
 } from "../../components/transactions/transactions";
 import { ReactComponent as WalletIcon } from "../../icons/wallet.svg";
-import { ReactComponent as RightArrow } from "../../icons/right-arrow.svg";
 import Card from "../../components/card/card";
 
 const Home: React.FC<{}> = () => {
